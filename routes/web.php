@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -24,7 +25,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::middleware(['auth', 'isAdmin'])->group(function () {
 
-    Route::get('/dashboard', function () {
-        return view('admin.index');
-    });
+    Route::get('/dashboard', 'Admin\frontendcontroller@index');
+    Route::get('categories', 'Admin\categorycontroller@index');
+    Route::get('add-category','Admin\categorycontroller@add');
+    Route::post('insert-category','Admin\categorycontroller@insert');
+    
 });
