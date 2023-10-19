@@ -15,7 +15,7 @@
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="{{ asset('admin/css/material-dashboard.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('admin/css/custom.css') }}">
 
 
     <!-- Scripts -->
